@@ -1,0 +1,346 @@
+
+
+<style>
+  /* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+
+  .parallax_space_group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer-space-logo {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer-space-back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+  .parallax__layer-space-behind {
+    -webkit-transform: translateZ(-550px) scale(2);
+    transform: translateZ(-550px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer-space-saturn {
+    -webkit-transform: translateZ(-2000px) scale(7);
+    transform: translateZ(-2000px) scale(7);
+    z-index: 2;
+  }
+  .parallax__layer-space-starsClose {
+    -webkit-transform: translateZ(-3000px) scale(11);
+    transform: translateZ(-3000px) scale(11);
+   
+    z-index: 2;
+  }
+  .parallax__layer-space-starsFar {
+    -webkit-transform: translateZ(-5000px) scale(18);
+    transf2rm: translateZ(-5000px) scale(18);
+    z-index: 2;
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+
+  .earthGif{
+    position: relative;
+    top: 1000px;
+  }
+
+  body, html {
+    overflow: hidden;
+  }
+
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+ 
+  #group1 {
+    z-index: 5; /* slide under group 3 and 5 */
+    padding-left: 0px;
+    height: 2000px;
+    color: white;
+  }
+  #group1 .parallax__layer-space-starsFar {
+    background: #262222;
+  }
+  #group1 .topTitle{
+    position: relative;
+    top: 180px;
+    left: 10px;
+  }
+  #group1 .jpeg{
+    position: relative;
+    top: 162px;
+    left: 10px;
+  }
+  #group1 .mars{
+    position: relative;
+
+    left: 700px;
+  }
+  #group1 .marsImage{
+    position: relative;
+    top: 500px;
+    left: 700px;
+  }
+  
+  #group1 .saturnImage{
+    position: relative;
+    top: 799px;
+    left: 100px;
+  }
+  #group1 #starFar1{
+    position: relative;
+    top: 800px;
+    left: 228px;
+  }
+  #group1 #starFar2{
+    position: relative;
+    top: 900px;
+    left: 1000px;
+  }
+  #group1 #starFar3{
+    position: relative;
+    top: 1108px;
+    left: 881px;
+  }
+  #group1 #starFar4{
+    position: relative;
+    top: 1183px;
+    left: 50px;
+  }
+  #group1 #starFar5{
+    position: relative;
+    top: 1300px;
+    left: 300px;
+  }
+  #group1 #starFar6{
+    position: relative;
+    top: 970px;
+    left: 568px;
+  }
+  #group1 #starFar7{
+    position: relative;
+    top: 1000px;
+    left: 250px;
+  }
+  #group1 #starFar8{
+    position: relative;
+    top: 725px;
+    left: 1000px;
+  }
+  #group1 #starFar9{
+    position: relative;
+    top: 1250px;
+    left: 1000px;
+  }
+  #group1 #starFar10{
+    position: relative;
+    top: 1250px;
+    left: 740px;
+  }
+  #group1 #starFar11{
+    position: relative;
+    top: 1400px;
+    left: 600px;
+  }
+  #group1 #starFar12{
+    position: relative;
+    top: 1500px;
+    left: 100px;
+  }
+  #group1 #starFar13 {
+    position: relative;
+    top: 1442px;
+    left: 798px;
+  }
+  #group1 #starFar14 {
+    position: relative;
+    top: 1600px;
+    right: 100px;
+  }
+  #group1 #starFar15 {
+    position: relative;
+    top: 1608px;
+    left: 412px;
+  }
+  #group1 #starFar16 {
+    position: relative;
+    top: 1695px;
+    left: 798px;
+  }
+  #group1 #starFar17 {
+    position: relative;
+    top: 1675px;
+    left: 200px;
+  }
+
+#group1 .parallax__layer-space-starsClose {
+    position: relative;
+    top: -8180px;
+  }
+  #group1 #starClose1{
+    position: relative;
+    top: 800px;
+    left: 228px;
+  }
+  #group1 #starClose2{
+    position: relative;
+    top: 900px;
+    left: 1000px;
+  }
+  #group1 #starClose3{
+    position: relative;
+    top: 1108px;
+    left: 881px;
+  }
+  #group1 #starClose4{
+    position: relative;
+    top: 1183px;
+    left: 50px;
+  }
+  #group1 #starClose5{
+    position: relative;
+    top: 1300px;
+    left: 300px;
+  }
+  #group1 #starClose6{
+    position: relative;
+    top: 970px;
+    left: 568px;
+  }
+  #group1 #starClose7{
+    position: relative;
+    top: 1000px;
+    left: 250px;
+  }
+  #group1 #starClose8{
+    position: relative;
+    top: 725px;
+    left: 1000px;
+  }
+  #group1 #starClose9{
+    position: relative;
+    top: 1250px;
+    left: 1000px;
+  }
+  #group1 #starClose10{
+    position: relative;
+    top: 1250px;
+    left: 740px;
+  }
+  #group1 #starClose11{
+    position: relative;
+    top: 1400px;
+    left: 600px;
+  }
+  #group1 #starClose12{
+    position: relative;
+    top: 1500px;
+    left: 100px;
+  }
+  #group1 #starClose13 {
+    position: relative;
+    top: 1442px;
+    left: 798px;
+  }
+  #group1 #starClose14 {
+    position: relative;
+    top: 1600px;
+    right: 100px;
+  }
+  #group1 #starClose15 {
+    position: relative;
+    top: 1608px;
+    left: 412px;
+  }
+  #group1 #starClose16 {
+    position: relative;
+    top: 1695px;
+    left: 798px;
+  }
+  #group1 #starClose17 {
+    position: relative;
+    top: 1675px;
+    left: 200px;
+  }
+
+  /* misc
+  --------------------------------------------- */
+  
+</style>
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
