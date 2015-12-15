@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+$(".parallax").hide();
+
+$(document).ready(function(){
+	$(".parallax").show();
+})
