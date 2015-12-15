@@ -17,8 +17,3 @@
 
 
 
-$(".parallax").hide();
-
-$(document).ready(function(){
-	$(".parallax").show();
-})
