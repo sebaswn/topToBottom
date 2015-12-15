@@ -1,10 +1,9 @@
-<div id="msg" >
-<!-- you can set whatever style you want on this -->
-Loading, please wait...
-</div>
-
-<body style="display:none;">
-  <div class="parallax">
+<body>
+  <div id="msg" >
+    <!-- you can set whatever style you want on this -->
+    Loading, please wait...
+  </div>
+  <div class="parallax" style="display:none;">
     <div id="group1" class="parallax_space_group">
       <div class="parallax__layer jpeg parallax__layer-space-logo">
         <div class="title"><img src="/assets/amazingPlanet.jpg" height="300px" width="500px"></div>
@@ -405,8 +404,9 @@ Loading, please wait...
 <script type="text/javascript">
 
   $(document).ready(function() {
-    $('body').show();
+    $('.parallax').show();
     $('#msg').hide();
+    console.log("hello")
   });
   
 
