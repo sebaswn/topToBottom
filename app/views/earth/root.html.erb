@@ -2,41 +2,68 @@
 
   
   <div class="parallax">
-    <div id="group1" class="parallax__group">
-      <div class="parallax__layer jpeg parallax__layer--base">
+    <div id="group1" class="parallax_space_group">
+      <div class="parallax__layer jpeg parallax__layer-space-logo">
         <div class="title"><img src="/assets/amazingPlanet.jpg" height="300px" width="500px"></div>
       </div>
-      <div class="parallax__layer topTitle parallax__layer--base">
+      <div class="parallax__layer topTitle parallax__layer-space-logo">
         <div class="title"><p><img src="/assets/amazingPlanet.gif" height="300px" width="500px"></p><p>From Top To Bottom</p></div>
       </div>
-      <div class="parallax__layer earthGif parallax__layer--back">
+      <div class="parallax__layer earthGif parallax__layer-space-back">
         <div class="title"><img src="/assets/earth2.gif" height="500px" width="500px"></div>
       </div>
-      <div class="parallax__layer mars parallax__layer--behind">
+      <div class="parallax__layer mars parallax__layer-space-behind">
 
         <img class="marsImage" src="/assets/mars.png" height="100" width="100">
       </div>
-      <div class="parallax__layer parallax__layer--deep">
+      <div class="parallax__layer parallax__layer-space-saturn">
         <div class="title"></div>
         <img class="saturnImage" src="/assets/saturn.png" height="50" width="75">
-        
-
-
-
       </div>
-      <div class="parallax__layer parallax__layer--superDeep">
+
+      <div class="parallax__layer parallax__layer-space-starsClose">
         <div class="title"></div>
-        <img id="star1" src="/assets/star.png" height="10" width="10">
-        <img id="star2" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
-        <img id="star3" src="/assets/star.png" height="10" width="10">
+        <img id="starClose1" src="/assets/star.png" height="10" width="10">
+        <img id="starClose2" src="/assets/star.png" height="10" width="10">
+        <img id="starClose3" src="/assets/star.png" height="10" width="10">
+        <img id="starClose4" src="/assets/star.png" height="10" width="10">
+        <img id="starClose5" src="/assets/star.png" height="10" width="10">
+        <img id="starClose6" src="/assets/star.png" height="10" width="10">
+        <img id="starClose7" src="/assets/star.png" height="10" width="10">
+        <img id="starClose8" src="/assets/star.png" height="10" width="10">
+        <img id="starClose9" src="/assets/star.png" height="10" width="10">
+        <img id="starClose10" src="/assets/star.png" height="10" width="10">
+        <img id="starClose11" src="/assets/star.png" height="10" width="10">
+        <img id="starClose12" src="/assets/star.png" height="10" width="10">
+        <img id="starClose13" src="/assets/star.png" height="10" width="10">
+        <img id="starClose14" src="/assets/star.png" height="10" width="10">
+        <img id="starClose15" src="/assets/star.png" height="10" width="10">
+        <img id="starClose16" src="/assets/star.png" height="10" width="10">
+        <img id="starClose17" src="/assets/star.png" height="10" width="10">
+      </div>
+    
+      <div class="parallax__layer parallax__layer-space-starsFar">
+        <div class="title"></div>
+        <img id="starFar1" src="/assets/star.png" height="10" width="10">
+        <img id="starFar2" src="/assets/star.png" height="10" width="10">
+        <img id="starFar3" src="/assets/star.png" height="10" width="10">
+        <img id="starFar4" src="/assets/star.png" height="10" width="10">
+        <img id="starFar5" src="/assets/star.png" height="10" width="10">
+        <img id="starFar6" src="/assets/star.png" height="10" width="10">
+        <img id="starFar7" src="/assets/star.png" height="10" width="10">
+        <img id="starFar8" src="/assets/star.png" height="10" width="10">
+        <img id="starFar9" src="/assets/star.png" height="10" width="10">
+        <img id="starFar10" src="/assets/star.png" height="10" width="10">
+        <img id="starFar11" src="/assets/star.png" height="10" width="10">
+        <img id="starFar12" src="/assets/star.png" height="10" width="10">
+        <img id="starFar13" src="/assets/star.png" height="10" width="10">
+        <img id="starFar14" src="/assets/star.png" height="10" width="10">
+        <img id="starFar15" src="/assets/star.png" height="10" width="10">
+        <img id="starFar16" src="/assets/star.png" height="10" width="10">
+        <img id="starFar17" src="/assets/star.png" height="10" width="10">
       </div>
     </div>
-  </div>
+
 
 </body>
 
@@ -58,7 +85,7 @@
     perspective-origin-x: 100%;
   }
 
-  .parallax__group {
+  .parallax_space_group {
     position: relative;
     height: 500px; /* fallback for older browsers */
     height: 100vh;
@@ -82,32 +109,37 @@
     z-index: 1;
   }
 
-  .parallax__layer--base {
+  .parallax__layer-space-logo {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
   }
 
-  .parallax__layer--back {
+  .parallax__layer-space-back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
   }
-  .parallax__layer--behind {
+  .parallax__layer-space-behind {
     -webkit-transform: translateZ(-550px) scale(2);
     transform: translateZ(-550px) scale(2);
     z-index: 3;
   }
 
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
+  .parallax__layer-space-saturn {
+    -webkit-transform: translateZ(-2000px) scale(7);
+    transform: translateZ(-2000px) scale(7);
     z-index: 2;
   }
-  .parallax__layer--superDeep {
+  .parallax__layer-space-starsClose {
+    -webkit-transform: translateZ(-3000px) scale(11);
+    transform: translateZ(-3000px) scale(11);
+    z-index: 2;
+  }
+  .parallax__layer-space-starsFar {
     -webkit-transform: translateZ(-5000px) scale(18);
     transform: translateZ(-5000px) scale(18);
-    z-index: 2
+    z-index: 2;
   }
 
 
@@ -156,7 +188,7 @@
     height: 2000px;
     color: white;
   }
-  #group1 .parallax__layer--superDeep {
+  #group1 .parallax__layer-space-starsFar {
     background: #262222;
   }
   #group1 .topTitle{
@@ -166,7 +198,7 @@
   }
   #group1 .jpeg{
     position: relative;
-    top: 162.5px;
+    top: 162px;
     left: 10px;
   }
   #group1 .mars{
@@ -182,23 +214,184 @@
   
   #group1 .saturnImage{
     position: relative;
-    top: 700px;
-    left: 200px;
+    top: 799px;
+    left: 100px;
   }
-  #group1 #star1{
+  #group1 #starFar1{
     position: relative;
-    top: 600px;
-    left: 50px;
+    top: 800px;
+    left: 228px;
   }
-  #group1 #star2{
+  #group1 #starFar2{
     position: relative;
     top: 900px;
     left: 1000px;
   }
-  #group1 #star3{
+  #group1 #starFar3{
+    position: relative;
+    top: 1108px;
+    left: 881px;
+  }
+  #group1 #starFar4{
+    position: relative;
+    top: 1183px;
+    left: 50px;
+  }
+  #group1 #starFar5{
+    position: relative;
+    top: 1300px;
+    left: 300px;
+  }
+  #group1 #starFar6{
+    position: relative;
+    top: 970px;
+    left: 568px;
+  }
+  #group1 #starFar7{
+    position: relative;
+    top: 1000px;
+    left: 250px;
+  }
+  #group1 #starFar8{
+    position: relative;
+    top: 725px;
+    left: 1000px;
+  }
+  #group1 #starFar9{
+    position: relative;
+    top: 1250px;
+    left: 1000px;
+  }
+  #group1 #starFar10{
+    position: relative;
+    top: 1250px;
+    left: 740px;
+  }
+  #group1 #starFar11{
+    position: relative;
+    top: 1400px;
+    left: 600px;
+  }
+  #group1 #starFar12{
+    position: relative;
+    top: 1500px;
+    left: 100px;
+  }
+  #group1 #starFar13 {
+    position: relative;
+    top: 1442px;
+    left: 798px;
+  }
+  #group1 #starFar14 {
+    position: relative;
+    top: 1600px;
+    right: 100px;
+  }
+  #group1 #starFar15 {
+    position: relative;
+    top: 1608px;
+    left: 412px;
+  }
+  #group1 #starFar16 {
+    position: relative;
+    top: 1695px;
+    left: 798px;
+  }
+  #group1 #starFar17 {
+    position: relative;
+    top: 1675px;
+    left: 200px;
+  }
+
+
+#group1 .parallax__layer-space-starsClose {
+    position: relative;
+    bottom: 1000px;
+  }
+  #group1 #starClose1{
+    position: relative;
+    top: 800px;
+    left: 228px;
+  }
+  #group1 #starClose2{
     position: relative;
     top: 900px;
-    right: 700px;
+    left: 1000px;
+  }
+  #group1 #starClose3{
+    position: relative;
+    top: 1108px;
+    left: 881px;
+  }
+  #group1 #starClose4{
+    position: relative;
+    top: 1183px;
+    left: 50px;
+  }
+  #group1 #starClose5{
+    position: relative;
+    top: 1300px;
+    left: 300px;
+  }
+  #group1 #starClose6{
+    position: relative;
+    top: 970px;
+    left: 568px;
+  }
+  #group1 #starClose7{
+    position: relative;
+    top: 1000px;
+    left: 250px;
+  }
+  #group1 #starClose8{
+    position: relative;
+    top: 725px;
+    left: 1000px;
+  }
+  #group1 #starClose9{
+    position: relative;
+    top: 1250px;
+    left: 1000px;
+  }
+  #group1 #starClose10{
+    position: relative;
+    top: 1250px;
+    left: 740px;
+  }
+  #group1 #starClose11{
+    position: relative;
+    top: 1400px;
+    left: 600px;
+  }
+  #group1 #starClose12{
+    position: relative;
+    top: 1500px;
+    left: 100px;
+  }
+  #group1 #starClose13 {
+    position: relative;
+    top: 1442px;
+    left: 798px;
+  }
+  #group1 #starClose14 {
+    position: relative;
+    top: 1600px;
+    right: 100px;
+  }
+  #group1 #starClose15 {
+    position: relative;
+    top: 1608px;
+    left: 412px;
+  }
+  #group1 #starClose16 {
+    position: relative;
+    top: 1695px;
+    left: 798px;
+  }
+  #group1 #starClose17 {
+    position: relative;
+    top: 1675px;
+    left: 200px;
   }
 
   /* misc
