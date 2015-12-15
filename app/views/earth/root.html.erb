@@ -1,6 +1,9 @@
-<body>
+<div id="msg" >
+<!-- you can set whatever style you want on this -->
+Loading, please wait...
+</div>
 
-  
+<body style="display:none;">
   <div class="parallax">
     <div id="group1" class="parallax_space_group">
       <div class="parallax__layer jpeg parallax__layer-space-logo">
@@ -399,15 +402,15 @@
   
 </style>
 
-<script>
-  $(".parallax").hide();
+<script type="text/javascript">
 
-
-  $(window).load(function(){
-
-    $(".parallax").show();
+  $(document).ready(function() {
+    $('body').show();
+    $('#msg').hide();
   });
   
 
 </script>
+
+
 
