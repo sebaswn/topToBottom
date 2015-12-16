@@ -1,5 +1,10 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
 
+<body>
   <div class="parallax">
     <div id="group1" class="parallax_space_group">
       
@@ -85,14 +90,20 @@
   <h1> Welcome To This Webpage </h1>
   <p class="loading"> Loading... (this may take a couple seconds) </p>
   <button class="showPage" style="display:none;">Show Page</button>
-
-<!--   <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
- -->
 </div>
+</html>
+
 
 
 
 <style>
+body{
+  height: 100vh;
+}
+.scroll{
+  position: fixed;
+  top:0px;
+}
 
 .sizeSmall{
   width: 8px;
@@ -458,7 +469,7 @@
   
 </style>
 
-<script type="text/javascript">
+<script>
 
 
 
@@ -470,9 +481,27 @@
        $('#loading').hide();
 
        $(".topTitle").show();
+       
      })
   });
 
+var ani = false
+
+  $(window).keypress(function(event){
+    event.preventDefault();
+
+    if ((event.keyCode === 0 && ani === true) || (event.keyCode === 32 && ani === true)) {
+      ani = false
+      $('.parallax').stop()
+    }else if ((event.keyCode === 0 && ani === false) || (event.keyCode === 32 && ani === false)) {
+      ani = true
+      
+      $('.parallax').stop().animate({
+        scrollTop: $(".parallax")[0].scrollHeight
+      }, (($(".parallax")[0].scrollHeight-$(".parallax").scrollTop())/1000)*1000)
+    }
+  })
+  
   
 
 </script>
