@@ -9,13 +9,16 @@
     <div id="group1" class="parallax_space_group">
       
       <div class="parallax__layer topTitle parallax__layer-space-logo" style="display:none;">
-        <div class="title"><p><img id="amazingPlanetGif" src="/assets/amazingPlanetTransparent.gif" height="300px" width="500px"></p><p>From Top To Bottom</p></div>
+        <div class="title"><p><img id="amazingPlanetGif" src="/assets/amazingPlanetTransparent.gif" height="300px" width="500px"></p></div>
+      </div>
+      <div class="parallax__layer topTitle parallax__layer-space-fore">
+       <div class="subtitle">From Top To Bottom</div>
       </div>
       <div class="parallax__layer earthGif parallax__layer-space-back">
         <div class="title"><img class="earthGifLoad" src="/assets/earthTransparent.gif" height="500px" width="500px"></div>
       </div>
       <div class="parallax__layer mars parallax__layer-space-behind">
-
+ 
         <img class="marsImage" src="/assets/mars.png" height="100" width="100">
       </div>
       <div class="parallax__layer parallax__layer-space-saturn">
@@ -165,7 +168,7 @@ body{
     transform-origin-x: 100%;
   }
 
-  .parallax__layer--fore {
+  .parallax__layer-space-fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
@@ -248,7 +251,12 @@ body{
   /* style the groups
   --------------------------------------------- */
 
- 
+ #group1 .subtitle {
+  position: relative;
+  top: 200px;
+  text-align: center;
+ }
+
   #group1 {
     z-index: 5; /* slide under group 3 and 5 */
     padding-left: 0px;
