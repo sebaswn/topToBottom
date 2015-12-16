@@ -1,8 +1,9 @@
 <body>
-  <div id="msg" >
-    <!-- you can set whatever style you want on this -->
+
+ <!--  <div id="msg" >
     Loading, please wait...
-  </div>
+  </div> -->
+
   <div class="parallax" style="display:none;">
     <div id="group1" class="parallax_space_group">
       <div class="parallax__layer jpeg parallax__layer-space-logo">
@@ -12,7 +13,7 @@
         <div class="title"><p><img id="planetGif" src="/assets/amazingPlanet.gif" height="300px" width="500px"></p><p>From Top To Bottom</p></div>
       </div>
       <div class="parallax__layer earthGif parallax__layer-space-back">
-        <div class="title"><img src="/assets/earth2.gif" height="500px" width="500px"></div>
+        <div class="title"><img class="earthGifLoad" src="/assets/earth2.gif" height="500px" width="500px"></div>
       </div>
       <div class="parallax__layer mars parallax__layer-space-behind">
 
@@ -408,10 +409,10 @@
 <script type="text/javascript">
 
 
-  $(document).ready(function() {
+  $(".earthGifLoad").ready(function() {
     $('.parallax').show();
-    $('#msg').hide();
-    console.log("hello")
+
+    console.log("Earth Has Loaded")
   });
   
 
