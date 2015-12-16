@@ -7,7 +7,7 @@
   <div class="parallax" style="display:none;">
     <div id="group1" class="parallax_space_group">
       <div class="parallax__layer jpeg parallax__layer-space-logo">
-        <div class="title"><img src="/assets/amazingPlanet.jpg" height="300px" width="500px"></div>
+        <div class="title"><img id="amazingPlanetGif" src="/assets/amazingPlanet.jpg" height="300px" width="500px"></div>
       </div>
       <div class="parallax__layer topTitle parallax__layer-space-logo">
         <div class="title"><p><img id="planetGif" src="/assets/amazingPlanet.gif" height="300px" width="500px"></p><p>From Top To Bottom</p></div>
@@ -433,8 +433,9 @@
 
 
 
-    $(window).load(function() {
+  $(window).load(function() {
      $('#loading').hide();
+     $("#amazingPlanetGif").attr("src", "animated.gif");
   });
 
   
