@@ -7,7 +7,7 @@
         <div class="title"><p><img id="amazingPlanetGif" src="/assets/amazingPlanetTransparent.gif" height="300px" width="500px"></p><p>From Top To Bottom</p></div>
       </div>
       <div class="parallax__layer earthGif parallax__layer-space-back">
-        <div class="title"><img class="earthGifLoad" src="/assets/earth2.gif" height="500px" width="500px"></div>
+        <div class="title"><img class="earthGifLoad" src="/assets/earthTransparent.gif" height="500px" width="500px"></div>
       </div>
       <div class="parallax__layer mars parallax__layer-space-behind">
 
@@ -86,6 +86,7 @@
 </body>
 <div id="loading">
   <h1> Welcome To This Webpage </h1>
+  <p class="loading"> Loading... (this may take a couple seconds) </p>
   <button class="showPage" style="display:none;">Show Page</button>
 
 <!--   <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
@@ -458,9 +459,11 @@
 
   $(window).load(function() {
      $(".showPage").show();
+     $('.loading').hide();
 
      $(".showPage").click(function(){
        $('#loading').hide();
+
        $(".topTitle").show();
      })
   });
