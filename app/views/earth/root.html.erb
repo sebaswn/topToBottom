@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
 </head>
 
 <body>
-  <div class="parallax">
+  <div id="loading">
+    <div class="loadingTitle">
+      <p><h1> Welcome To This Webpage </h1></p>
+      <p class="loading"> Loading... (this may take a couple seconds) </p>
+      <p><button class="showPage" style="display:none;" height="40px" width="70px">Show Page</button></p>
+    </div>
+    <div class="spaceBar">
+      <h2><p class="spaceName"><b>Space</b></p></h2>
+      <h3><p class="firstInstructions">Press Spacebar to autoscroll animation<p></h3>
+      <img src="/assets/spaceBar.png"  height="75px" width="375px">
+      <h3><p class="secondInstructions">Press again to pause animation<p></h3>
+
+    </div>
+  </div>
+
+  <div class="parallax" style="display:none;">
     <div id="group1" class="parallax_space_group">
       
       <div class="parallax__layer topTitle parallax__layer-space-logo" style="display:none;">
@@ -89,11 +103,6 @@
 
 
 </body>
-<div id="loading">
-  <h1> Welcome To This Webpage </h1>
-  <p class="loading"> Loading... (this may take a couple seconds) </p>
-  <button class="showPage" style="display:none;">Show Page</button>
-</div>
 </html>
 
 
@@ -129,12 +138,26 @@ body{
    text-align: center;
 }
 
-#loading-image {
-  position: absolute;
-  top: 100px;
-  left: 240px;
-  z-index: 100;
-}
+  .spaceBar{
+    position: relative;
+    top: 200px; 
+
+  }
+  .spaceName{
+    position: relative;
+    top: 58px;
+    color: black;
+    right: 140px;
+  }
+  .loadingTitle{
+    padding-top: 40px;
+  }
+  #loading-image {
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    z-index: 100;
+  }
 
   /* Parallax base styles
   --------------------------------------------- */
@@ -488,6 +511,7 @@ body{
      $(".showPage").click(function(){
        $('#loading').hide();
 
+       $(".parallax").show();
        $(".topTitle").show();
        
      })
