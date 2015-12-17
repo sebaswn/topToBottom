@@ -22,11 +22,6 @@
     transform: translate(-50%, -50%);
   }
 
-
-
-  /* style the groups
-  --------------------------------------------- */
-
  #groupSpace .subtitle {
   position: relative;
   top: 200px;
@@ -40,6 +35,7 @@
     height: 2000px;
     color: white;
   }
+
   #groupSpace .parallax__layer-space-starsFar {
     background: #262222;
   }
@@ -69,6 +65,14 @@
     top: 799px;
     left: 100px;
   }
+
+
+  /* Style of stars
+  ------------------------------------------------------------------------------------- */
+
+
+ /* Stars Far
+  ------------------------------------------------------------------------------------- */
   #groupSpace #starFar1{
     position: relative;
     top: 800px;
@@ -154,6 +158,10 @@
     top: 1675px;
     left: 200px;
   }
+
+
+   /* Stars Close
+  ------------------------------------------------------------------------------------- */
 
   #groupSpace .starsClose1 {
     position: relative;

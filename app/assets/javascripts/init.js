@@ -3,10 +3,11 @@
      $('.loading').hide();
 
      $(".showPage").click(function(){
-       $('#loading').hide();
+       	$(".parallax").show()	
+       $('#loading').fadeOut(900, function(){
+       		$(".topTitle").show()	
+       })
 
-       $(".parallax").show();
-       $(".topTitle").show();
 
        
      })
