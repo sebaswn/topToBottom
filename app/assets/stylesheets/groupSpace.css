@@ -65,6 +65,16 @@
     top: 799px;
     left: 100px;
   }
+  #groupSpace .venusImage{
+    position: relative;
+    top: 500px;
+    left: 300px;
+  }
+  #groupSpace .mercuryImage{
+    position: relative;
+    top: 600px;
+    left: 200px;
+  }
 
 
   /* Style of stars

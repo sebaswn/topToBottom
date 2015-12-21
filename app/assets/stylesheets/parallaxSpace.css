@@ -29,7 +29,7 @@
     transform: translateZ(-300px) scale(2);
     z-index: 3;
   }
-  .parallax__layer-space-behind {
+  .parallax__layer-space-mars {
     -webkit-transform: translateZ(-550px) scale(2);
     transform: translateZ(-550px) scale(2);
     z-index: 3;
@@ -38,6 +38,16 @@
   .parallax__layer-space-saturn {
     -webkit-transform: translateZ(-2000px) scale(7);
     transform: translateZ(-2000px) scale(7);
+    z-index: 2;
+  }
+  .parallax__layer-space-venus {
+    -webkit-transform: translateZ(-2250px) scale(7);
+    transform: translateZ(-2250px) scale(7);
+    z-index: 2;
+  }
+  .parallax__layer-space-mercury {
+    -webkit-transform: translateZ(-1500px) scale(5);
+    transform: translateZ(-1500px) scale(5);
     z-index: 2;
   }
   .parallax__layer-space-starsClose {
