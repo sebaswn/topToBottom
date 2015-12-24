@@ -1,7 +1,7 @@
 <div id="groupSpace" class="parallax_space_group">
 
 	<div class="parallax__layer topTitle parallax__layer-space-logo" style="display:none;">
-	  <div class="title"><p><img id="amazingPlanetGif" src="/assets/amazingPlanetTransparent.gif" height="300px" width="500px"></p></div>
+	  <div class="title"><p><img id="amazingPlanetGif " src="/assets/amazingPlanetTransparent.gif" height="300px" width="500px"></p></div>
 	</div>
 
 	<div class="parallax__layer topTitle parallax__layer-space-fore">
@@ -9,23 +9,23 @@
 	</div>
 
 	<div class="parallax__layer earthGif parallax__layer-space-back">
-	  <div class="title"><img class="earthGifLoad" src="/assets/earthTransparent.gif" height="500px" width="500px"></div>
+	  <div class="title"><img class="earthGifLoad info" data-name="mars" title="Earth" src="/assets/earthTransparent.gif" height="500px" width="500px"></div>
 	</div>
 
 	<div class="parallax__layer mars parallax__layer-space-mars">
-	  <img class="marsImage" src="/assets/mars.png" height="100" width="100">
+	  <img class="marsImage info" data-name"mars" title="Mars" src="/assets/mars.png" height="100" width="100">
 	</div>
 
 	<div class="parallax__layer parallax__layer-space-saturn">
-	  <img class="saturnImage" src="/assets/saturn.png" height="50" width="75">
+	  <img class="saturnImage info" data-name="saturn" title="Saturn" src="/assets/saturn.png" height="50" width="75">
 	</div>
 
 	<div class="parallax__layer parallax__layer-space-venus">
-	  <img class="venusImage" src="/assets/venus.png" height="75" width="75">
+	  <img class="venusImage info" data-name="venus" title="Venus" src="/assets/venus.png" height="75" width="75">
 	</div>
 
 	<div class="parallax__layer parallax__layer-space-mercury">
-	  <img class="mercuryImage" src="/assets/mercury.png" height="50" width="50">
+	  <img class="mercuryImage info" data-name="mercury" title="mercury" src="/assets/mercury.png" height="50" width="50">
 	</div>
 
 	<div class="parallax__layer starsClose1 parallax__layer-space-starsClose">
@@ -87,5 +87,64 @@
 	  <img id="starFar16" class="sizeSmall" src="/assets/star.png">
 	  <img id="starFar17" class="sizeSmall" src="/assets/star.png">
 	</div>
-	
 </div>
+
+<script>
+
+$(".info").mouseover(function(){
+	console.log("Hello")
+  thisElement = $(this)
+  
+  $.ajax( {
+      url: "https://en.wikipedia.org/w/api.php?action=query&titles="+ 
+                          $(this).attr("data-name") +"&prop=revisions&rvprop=content&rvsection=0&format=json",
+    
+      dataType: 'jsonp',
+      type: 'POST',
+      headers: { 'Api-User-Agent': 'Example/1.0' },
+      success: function(data) {
+        
+        var jsonObj = data.query.pages;
+        
+          var PageID;
+          // Get property key name of page ID
+          for(var key in jsonObj) {
+              if(jsonObj.hasOwnProperty(key)) {
+                  PageID = jsonObj[key];
+                  break;
+              }
+          }
+          
+          content = PageID.revisions[0]['*']; 
+          contentSplit = content.split("\n\n");
+          contentSplitAgain = contentSplit[1].split("<ref>");
+          
+          // contentFinal = contentSplitAgain[0].replace("'", "")
+          contentReplace = contentSplitAgain[0].replace(/[&\/\\#=+$~%_'":*?<>{}]/g,'');
+          contentFinal = contentReplace.replaceAll('[','');
+          contentFinal = contentFinal.replaceAll(']','');
+          contentFinal = contentFinal.replaceAll("|",'-')
+          
+          thisElement.attr("data-content", ""+contentFinal+"");
+          thisElement.popover('show');
+      }
+  } );
+})
+
+$(".info").mouseout(function(){
+  $(this).popover('hide')
+})
+
+String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+}
+
+
+
+
+
+  </script>
+
+
+

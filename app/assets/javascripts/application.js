@@ -16,6 +16,8 @@
 //= require_tree .
 //= requre init
 //= require autoScroll
+//= require viewInfo
+//= require bootstrap.min
 
 
 

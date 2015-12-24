@@ -15,10 +15,14 @@
  *= require loading
  *= require parallaxSpace
  *= require groupSpace
+ *= require bootstrap.min
  
 
  */
 
+.popover {
+  color: black;
+}
 body, html {
     overflow: hidden;
   }
